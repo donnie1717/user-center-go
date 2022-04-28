@@ -10,10 +10,8 @@ func Include(opts ...Option)  {
 	options = append(options, opts...)
 }
 
-func Init() *gin.Engine {
-	r := gin.Default()
+func Init(r *gin.Engine) {
 	for _, opt := range options {
 		opt(r)
 	}
-	return r
 }

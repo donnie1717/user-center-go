@@ -1,0 +1,2 @@
+mysql:
+  dsn: root:159753@tcp(127.0.0.1:3306)/user_center?charset=utf8mb4&parseTime=True&loc=Local

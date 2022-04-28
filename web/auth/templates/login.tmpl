@@ -5,7 +5,13 @@
     <title>登录页</title>
 </head>
 <body>
-  当前未登录，请输入用户名密码登录
+
+  {{if .failed}}
+    <p>{{.error_msg}}，请重新输入用户名密码登录</p>
+  {{else}}
+    <p>当前未登录，请输入用户名密码登录</p>
+  {{end}}
+
   <form name="input" action="/oauth/login", method="post">
       <p>用户名:<input type="text" name="username"></p>
       <p>密码:<input type="password" name="password"></p>
