@@ -35,7 +35,7 @@ func passwordLoginHandler(c *gin.Context)  {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{
+	c.HTML(http.StatusOK, "login.tmpl", gin.H{
 		"failed": true,
 		"error_msg": "用户名密码错误",
 	})

@@ -18,6 +18,8 @@ func main() {
 	// 模板设置
 	r.LoadHTMLGlob("web/auth/templates/*")
 
+
+
 	// ORM初始化
 
 	r.Run()
